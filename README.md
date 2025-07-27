@@ -44,6 +44,8 @@ JOIN Courses c ON r.course_id = c.course_id;
 
 
 
+
+
 ## ✅ User Registration API
 
 A backend project for learning and development, focused on building robust and modular API endpoints using modern technologies.
@@ -136,7 +138,7 @@ USERAPI_PROJECT/
 
 #### ✅ Core Features
 
-##### 🔐 User & Auth
+🔐 User & Auth
 
 - User registration with:
   - Strong password rules (8+ characters, uppercase, lowercase, digit, special character)  
