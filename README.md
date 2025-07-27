@@ -27,7 +27,6 @@ A relational database schema designed to manage academic operations such as stud
 - GitHub for version control
 
 ## 🧪 Sample Queries
-```sql
 -- Count of students in each department
 SELECT department_id, COUNT(*) AS student_count
 FROM Students
