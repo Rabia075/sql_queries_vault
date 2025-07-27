@@ -1,19 +1,214 @@
-# SQL Queries Vault
+🎓 *Online Student Registration System* – *Project Description*
 
-This repository contains backend-related files and SQL queries intended for database learning and development.  
-The purpose of this project is to maintain a growing collection of queries and backend scripts, especially for:
+1. Online platform for student registration
+2. Collects personal and academic information through a web form
+3. Stores student data in a structured and secure way
+4. Admin can manage student records and available courses
+Ideal for schools, colleges, or any educational center
 
-- Registration APIs
-- SQL practice and assignments
-- Future query updates
+👥 *Roles in the System*
 
-## Files Included
+👨‍🎓 *Student*
+1. Fill registration form
+2. Select one or more courses
+3. Submit details for registration
 
-- `registrationAPI.js`: Node.js API for user registration
-- `package.json`: Project dependencies and scripts
+🛠️ *Admin*
+1. View all student records
+2. Add/edit/delete student data
+3. Manage course list
 
-## Future Updates
+🧩 *Main Database Tables*
 
-Queries will be added regularly as the coursework progresses.  
-Stay tuned for more `.sql` files and enhanced backend logic.# UserQueries
-Repository contains SQL queries and intend for database practice and ongoing query updates
+*Students* – personal and contact information
+*Courses* – list of offered subjects
+*Student_Course* – connects students to selected courses
+*Admins* – login info for admin
+*Logs (optional)* – track student activity
+
+💻 *Technology Stack* (Recommended):
+
+Frontend:
+🖥️ HTML + CSS
+🎨 JavaScript
+Backend:
+⚙️ PHP 
+🔐  Node.js with Express.js 
+Database:
+🗄️ MySQL or PostgreSQL
+
+## 📑 System Proposal Overview
+
+
+
+
+
+# 🎓 Online Student Registration System (db_Design)
+
+This project is a SQL-based relational database system for handling course registrations, students, departments, and instructors.
+
+## 📁 Tables Included
+- Students
+- Courses
+- Departments
+- Registrations
+- Instructors
+- Users (for login system)
+
+## 🔍 Features
+- Referential integrity with foreign keys
+- `CHECK`, `UNIQUE`, `NOT NULL`, `PRIMARY KEY` constraints
+- Example queries: `SELECT`, `JOIN`, `INSERT`, `UPDATE`, `DELETE`
+
+## 🛠️ Tools Used
+- PostgreSQL 16
+- pgAdmin 4
+- GitHub for version control
+
+
+
+
+
+## ✅ User Registration API
+
+A backend project for learning and development, focused on building robust and modular API endpoints using modern technologies.
+
+### Technologies Used
+- Node.js with Express.js for server-side logic  
+- PostgreSQL for relational database management  
+- JavaScript for API scripting  
+- Postman for testing and validation
+
+### Key Features
+- User registration with strong password validation and encryption  
+- Modular controller-based structure for clean, maintainable code  
+- Secure password storage using bcrypt  
+- Readable and scalable routing system  
+- Database connectivity configured via a centralized file
+
+### Project Structure
+
+USERREGISTRATION_API/
+│
+├── config/
+│   └── db.js                   // PostgreSQL DB config
+│
+├── controllers/
+│   └── userController.js      // User logic
+│
+├── routes/
+│   └── userRoutes.js          // User routes
+│
+├── utils/
+│   └── passwordValidator.js   // Password rules
+│
+├── userRegistrationAPI.js     // Main Express API file
+├── package.json               // Project info
+└── package-lock.json          // Dependency lock
+
+### Purpose
+Designed as a personal backend learning hub — allowing experimentation with SQL queries, encryption techniques, API building, and secure user data handling.
+
+### Future Plans
+The project will be extended to include complete APIs for all database tables used in the system.  
+This includes modules for managing courses, students, instructors, departments, registrations, and more — all following the same modular and professional approach demonstrated here.
+
+
+
+
+
+## ✅ User Registration & Management API
+
+Built for scalable backend development using Node.js, Express, and PostgreSQL.  
+Demonstrates modular architecture, strong data validation, and practical database operations through a RESTful API design.
+
+### 🧩 Technologies Used
+- Node.js with Express – for building RESTful APIs  
+- PostgreSQL – relational database for data persistence  
+- JavaScript – for all scripting and backend logic  
+- Postman – for testing and debugging endpoints  
+- bcrypt – for password encryption  
+- Custom Validators – for strong password, email format, input validation
+
+### 📁 Project Structure
+
+USERAPI_PROJECT/
+├── config/
+│   └── db.js                 // Database connection setup
+│
+├── controllers/
+│   ├── userController.js         // User logic
+│   ├── registrationController.js // Registration logic
+│   ├── studentController.js      // Student logic
+│   ├── courseController.js       // Course logic
+│   ├── instructorController.js   // Instructor logic
+│   └── departmentController.js   // Department logic
+│
+├── routes/
+│   ├── userRoutes.js
+│   ├── registrationRoutes.js
+│   ├── studentRoutes.js
+│   ├── courseRoutes.js
+│   ├── instructorRoutes.js
+│   └── departmentRoutes.js
+│
+├── utils/
+│   └── passwordValidator.js   // Custom password rules
+│
+├── registrationAPI.js         // Main API entry file
+├── package.json               // Project dependencies
+└── package-lock.json          // Dependency lock file
+
+#### ✅ Core Features
+
+##### 🔐 User & Auth
+
+- User registration with:
+  - Strong password rules (8+ characters, uppercase, lowercase, digit, special character)  
+  - Email format validation  
+  - Password encryption using bcrypt  
+  - Duplicate email check
+
+- Retrieve:
+  - All users  
+  - A user by ID  
+  - Users by role/username filters  
+  - A specific column by another column (e.g., get username where role = 'admin')
+
+- Update/Delete:
+  - With existence check before performing action
+
+#### 🎓 Course / Student / Instructor / Department APIs
+
+- Fully modular CRUD for each table
+
+- Retrieve:
+  - All records  
+  - Record by ID  
+  - Filtered by any column  
+  - One column's value by another column
+
+- Business logic rules like:
+  - `course.credit_hour <= 6`  
+  - No duplicate registration (student_id + course_id pair)  
+  - Pre-check if record exists before UPDATE or DELETE
+    
+### 🔮 Future Roadmap
+
+- ✅ Add login API using JWT (JSON Web Token)  
+- ✅ Implement authentication middleware  
+- ✅ Introduce role-based access control:
+  - Only admins allowed to update/delete  
+  - Regular users restricted to read-only  
+- 🔄 Add logging and activity tracking for all API hits  
+
+### 🧪 Testing
+
+All routes are tested using Postman with request examples for each CRUD operation.
+
+### 🎯 Purpose
+
+Developed as a backend practice and portfolio piece.  
+Focuses on building reusable, secure, and scalable REST APIs while applying real-world validation and business rules across modules.
+
+---
