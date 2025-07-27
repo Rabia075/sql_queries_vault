@@ -1,43 +1,4 @@
-🎓 *Online Student Registration System* – *Project Description*
 
-1. Online platform for student registration
-2. Collects personal and academic information through a web form
-3. Stores student data in a structured and secure way
-4. Admin can manage student records and available courses
-Ideal for schools, colleges, or any educational center
-
-👥 *Roles in the System*
-
-👨‍🎓 *Student*
-1. Fill registration form
-2. Select one or more courses
-3. Submit details for registration
-
-🛠️ *Admin*
-1. View all student records
-2. Add/edit/delete student data
-3. Manage course list
-
-🧩 *Main Database Tables*
-
-*Students* – personal and contact information
-*Courses* – list of offered subjects
-*Student_Course* – connects students to selected courses
-*Admins* – login info for admin
-*Logs (optional)* – track student activity
-
-💻 *Technology Stack* (Recommended):
-
-Frontend:
-🖥️ HTML + CSS
-🎨 JavaScript
-Backend:
-⚙️ PHP 
-🔐  Node.js with Express.js 
-Database:
-🗄️ MySQL or PostgreSQL
-
-## 📑 System Proposal Overview
 
 
 
