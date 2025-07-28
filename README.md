@@ -5,11 +5,11 @@
 📘 Learning & Development Timeline(Phase 1–3)
 
 1. 🧱 Phase 1:
-# Online Student Registration System (db_Design)
+### Online Student Registration System (db_Design)
 
 A relational database schema designed to manage academic operations such as student enrollments, course registrations, department classifications, and instructor assignments within an educational institution.
 
-## Tables Included
+### Tables Included
 - Students
 - Courses
 - Departments
@@ -17,17 +17,17 @@ A relational database schema designed to manage academic operations such as stud
 - Instructors
 - Users (for login system)
 
-## Features
+### Features
 - Referential integrity with foreign keys
 - `CHECK`, `UNIQUE`, `NOT NULL`, `PRIMARY KEY` constraints
 - Example queries: `SELECT`, `JOIN`, `INSERT`, `UPDATE`, `DELETE`
 
-## Tools Used
+### Tools Used
 - PostgreSQL 16
 - pgAdmin 4
 - GitHub for version control
 
-## Sample Queries
+### Sample Queries
 -- Count of students in each department
 SELECT department_id, COUNT(*) AS student_count
 FROM Students
@@ -47,7 +47,7 @@ JOIN Courses c ON r.course_id = c.course_id;
 
 
 2. 🧪 Phase 2:
-## User Registration API
+### User Registration API
 
 A backend project for learning and development, focused on building robust and modular API endpoints using modern technologies.
 
@@ -96,7 +96,7 @@ This includes modules for managing courses, students, instructors, departments, 
 
 
 3. 🚀 Phase 3:
-Student Registration System – RESTful APIs
+### Student Registration System – RESTful APIs
 
 Built for scalable backend development using Node.js, Express, and PostgreSQL.  
 Demonstrates modular architecture, strong data validation, and practical database operations through a RESTful API design.
