@@ -96,7 +96,7 @@ This includes modules for managing courses, students, instructors, departments, 
 
 
 3. 🚀 Phase 3:
-Student Registration System – APIs collection 
+Student Registration System – RESTful APIs
 
 Built for scalable backend development using Node.js, Express, and PostgreSQL.  
 Demonstrates modular architecture, strong data validation, and practical database operations through a RESTful API design.
