@@ -1,9 +1,9 @@
 
 
 
-📘 Learning & Development Timeline
+**📘 Learning & Development Timeline
 
-1. 🧱 Phase 1:
+1. 🧱 Phase 1:**
 # Online Student Registration System (db_Design)
 
 A relational database schema designed to manage academic operations such as student enrollments, course registrations, department classifications, and instructor assignments within an educational institution.
