@@ -6,7 +6,7 @@ const verifyToken = require('../middleware/verifyToken');
 const verifyRoleAndOwnership = require('../middleware/verifyRoleAndOwnership');
 
 // ==============================
-// 🔐 Protected Routes (Admin only)
+// Protected Routes (Admin only)
 
 //GET all students(Admin only)
 router.get('/', verifyToken, verifyRoleAndOwnership(['admin']), studentController.getAllStudents);
