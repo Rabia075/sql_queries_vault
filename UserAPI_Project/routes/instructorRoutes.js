@@ -18,7 +18,7 @@ router.get('/filter/select', verifyToken, verifyRoleAndOwnership(['admin']), ins
 router.get('/me', verifyToken, verifyRoleAndOwnership(['instructor']), instructorController.getMyProfile);
 // 🔐 Instructor can update own profile
 router.put('/me', verifyToken, verifyRoleAndOwnership(['instructor']), instructorController.updateMyProfile);
-// 🔐 Get students under a specific instructor
+// 🔐 Instructor can view students registered in their own assigned courses only
 router.get('/students/my-courses', verifyToken, verifyRoleAndOwnership(['instructor']), instructorController.getMyStudents);
 // 🔐 Get courses assigned to this instructor
 router.get('/my-courses', verifyToken, verifyRoleAndOwnership(['instructor']), instructorController.getMyCourses);
