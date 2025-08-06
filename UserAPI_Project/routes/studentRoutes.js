@@ -14,8 +14,7 @@ router.get('/', verifyToken, verifyRoleAndOwnership(['admin']), studentControlle
 router.get('/by-column', verifyToken, verifyRoleAndOwnership(['admin']), studentController.getStudentByColumn);
 //GET single_column data by column filter(Admin only)
 router.get('/column/:column', verifyToken, verifyRoleAndOwnership(['admin']), studentController.getStudentColumnByColumn);
-
-// 🔐 /me → student sees own profile
+//Student sees own profile →  /me 
 router.get(
   '/me',
   verifyToken,
@@ -23,15 +22,15 @@ router.get(
 
   studentController.seeOwnProfile
 );
-// 🔐 /me – student updates own profile
-router.put('/me', verifyToken, verifyRoleAndOwnership(['student']), studentController.updateOwnProfile);
-// 🔐 Get logged-in student’s own courses
+//Get logged-in student’s own courses
 router.get(
   '/me/courses',
   verifyToken,
   verifyRoleAndOwnership(['student']),
    registrationController.getCoursesForLoggedInStudent
 );
+//Student updates own profile →  /me 
+router.put('/me', verifyToken, verifyRoleAndOwnership(['student']), studentController.updateOwnProfile);
  //GET student by ID(Admin only)
 router.get('/:id', verifyToken, verifyRoleAndOwnership(['admin']), studentController.getStudentById);
 //PUT update student by ID(Admin only)
