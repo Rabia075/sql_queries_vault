@@ -14,7 +14,7 @@ router.get('/', verifyToken, verifyRoleAndOwnership(['admin']), studentControlle
 router.get('/by-column', verifyToken, verifyRoleAndOwnership(['admin']), studentController.getStudentByColumn);
 //GET single_column data by column filter(Admin only)
 router.get('/column/:column', verifyToken, verifyRoleAndOwnership(['admin']), studentController.getStudentColumnByColumn);
-//Student sees own profile →  /me 
+// 🔐 /me→ student sees own profile 
 router.get(
   '/me',
   verifyToken,
@@ -22,14 +22,14 @@ router.get(
 
   studentController.seeOwnProfile
 );
-//Get logged-in student’s own courses
+// 🔐 Get logged-in student’s own courses
 router.get(
   '/me/courses',
   verifyToken,
   verifyRoleAndOwnership(['student']),
    registrationController.getCoursesForLoggedInStudent
 );
-//Student updates own profile →  /me 
+// 🔐 /me→ student updates own profile 
 router.put('/me', verifyToken, verifyRoleAndOwnership(['student']), studentController.updateOwnProfile);
  //GET student by ID(Admin only)
 router.get('/:id', verifyToken, verifyRoleAndOwnership(['admin']), studentController.getStudentById);
@@ -39,7 +39,7 @@ router.put('/:id', verifyToken, verifyRoleAndOwnership(['admin']), studentContro
 router.delete('/:id', verifyToken, verifyRoleAndOwnership(['admin']), studentController.deleteStudent);
 
 // ==============================
-// 🟢 Public Route
+// Public Route
 
 //Register new student (Open to all — optional to protect)
 router.post('/', studentController.createStudent);
