@@ -5,7 +5,7 @@ const verifyToken = require('../middleware/verifyToken');
 const verifyRoleAndOwnership = require('../middleware/verifyRoleAndOwnership');
 
 // ==============================
-// 🔐 Protected Routes (Admin only)
+// Protected Routes (Admin only)
 
 //GET all instructors(Admin only)
 router.get('/', verifyToken, verifyRoleAndOwnership(['admin']), instructorController.getAllInstructors);
@@ -30,7 +30,7 @@ router.put('/:id', verifyToken, verifyRoleAndOwnership(['admin']), instructorCon
 router.delete('/:id', verifyToken, verifyRoleAndOwnership(['admin']), instructorController.deleteInstructor);
 
 // ==============================
-// 🟢 Public Route
+// Public Route
 
 //Register new instructor (Open to all options)
 router.post('/', instructorController.createInstructor);
