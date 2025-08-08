@@ -1,9 +1,12 @@
+-- =========================================================
+-- 🗃️ DATABASE SCHEMA DEFINITION
+-- =========================================================
+
 CREATE TABLE Departments (
     department_id SERIAL PRIMARY KEY,
     department_name VARCHAR(100) NOT NULL,
     department_code VARCHAR(20) UNIQUE NOT NULL
 );
-
 SELECT * FROM Departments;
 
 CREATE TABLE Students (
@@ -21,7 +24,6 @@ CREATE TABLE Students (
     FOREIGN KEY (department_id) REFERENCES Departments(department_id),
     FOREIGN KEY (user_id) REFERENCES Users(user_id)
 );
-
 SELECT * FROM Students;
 
 CREATE TABLE Instructors (
@@ -38,7 +40,6 @@ CREATE TABLE Instructors (
     user_id INT,
     FOREIGN KEY (user_id) REFERENCES Users(user_id)
 );
-
 SELECT * FROM Instructors;
 
 CREATE TABLE Courses (
@@ -51,7 +52,6 @@ CREATE TABLE Courses (
     FOREIGN KEY (department_id) REFERENCES Departments(department_id),
     FOREIGN KEY (instructor_id) REFERENCES Instructors(instructor_id)
 );
-
 SELECT * FROM Courses;
 
 CREATE TABLE Registrations (
@@ -64,7 +64,6 @@ CREATE TABLE Registrations (
     FOREIGN KEY (course_id) REFERENCES Courses(course_id),
     UNIQUE(student_id, course_id)
 );
-
 SELECT * FROM Registrations;
 
 CREATE TABLE Users (
@@ -74,7 +73,6 @@ CREATE TABLE Users (
     password VARCHAR NOT NULL,
     role VARCHAR(20) CHECK (role IN ('admin', 'student', 'instructor'))
 );
-
 SELECT * FROM Users;
 
 
@@ -88,7 +86,9 @@ SELECT * FROM Users;
 
 
 
-
+-- =========================================================
+-- 🛠️ DATA MANIPULATION QUERIES (CRUD + JOINS + LOGIC)
+-- =========================================================
 INSERT INTO Users (
     username, email, password, role
 ) VALUES 
@@ -110,7 +110,6 @@ INSERT INTO Users (
     '@ayzA11', 
     'student'
 );
-
 INSERT INTO Students (
     full_name, email, password, phone, gender, date_of_birth, address, department_id, user_id
 ) VALUES 
@@ -136,7 +135,6 @@ INSERT INTO Students (
     2,
     3
 );
-
 INSERT INTO Users (
     username, email, password, role
 ) VALUES 
@@ -152,7 +150,6 @@ INSERT INTO Users (
     '@nailA17', 
     'instructor'
 );
-
 INSERT INTO Instructors (
     full_name, email, password, phone, department_id, user_id
 ) VALUES 
