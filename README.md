@@ -26,6 +26,7 @@ Ideal for educational institutions such as colleges, universities, and training 
 
 ## 📂 Project Structure
 
+```
 APIForge/                         # Root Project
 │
 ├── config/                       # Configuration
@@ -62,7 +63,7 @@ APIForge/                         # Root Project
 ├── app.js                        # Main App Entry
 ├── package-lock.json             # Lock File
 └── package.json                  # Project Metadata
-
+```
 ---
 
 ## ✨ Key Features
