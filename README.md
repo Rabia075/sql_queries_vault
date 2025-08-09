@@ -80,3 +80,15 @@ APIForge/                         # Root Project
 **Step 1:** Install dependencies  
 ```bash
 npm install
+```
+
+**Step 2:** Configure environment variables in `.env`  
+```env
+DB_URL=your_postgres_url
+JWT_SECRET=your_secret_key
+```
+
+**Step 3:** Start server  
+```bash
+nodemon app.js
+```
