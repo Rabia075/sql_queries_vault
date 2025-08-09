@@ -1,7 +1,3 @@
-Samajh gaya — tum chah rahi ho ki README ka structure GitHub markdown style me proper bold headings, spacing, tables, aur code blocks ke saath ho, taki paste karte hi professional lage, na ki text ka jumla-jumla sa feel aaye.
-
-Main tumhara given material bina ek lafz change kiye sirf formatting ko perfect bana ke de raha hoon:
-
 
 ---
 
