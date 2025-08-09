@@ -1,10 +1,10 @@
-# 🧑‍🎓 Online Student Registration System (Node.js + PostgreSQL)
+#  🎓 Online Student Registration System (Node.js + PostgreSQL)
 
 A complete backend system designed for student registrations, course/instructor management, and secure role-based access control — built using modern technologies and clean coding practices.
 
 ---
 
-## 📌 Purpose
+## 🥅 Purpose
 
 This project serves as a backend learning portfolio to explore real-world API building, database design, JWT-based auth, secure user management, and modular Express structure.  
 Ideal for educational institutions such as colleges, universities, and training centers.
@@ -65,7 +65,7 @@ APIForge/                         # Root Project
 
 ---
 
-## 🔑 Key Features
+## ✨ Key Features
 
 - Database schema design (PostgreSQL)
 - CRUD APIs for all major entities  
